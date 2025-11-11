@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Summary Insights</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Summary & Insights</h1>
+    <button id="back-btn">← Back to Progress</button>
+  </header>
+
+  <div id="summary-page">
+    <section id="ai-results">
+      <h2>Your AI-Generated Summary</h2>
+      <div id="ai-summary-container" class="card">
+        <p id="summary-text">Generating your AI summary...</p>
+        <ul id="suggestions-list"></ul>
+      </div>
+    </section>
+
+    <section id="chart-section" class="card">
+      <h2>Visual Progress Breakdown</h2>
+      <canvas id="progressChart"></canvas>
+    </section>
+
+    <section id="resources-section" class="card">
+      <h2>Recommended Learning Resources</h2>
+      <ul id="resource-links"></ul>
+    </section>
+  </div>
+
+  <script src="ai_summary.js"></script>
+</body>
+</html>

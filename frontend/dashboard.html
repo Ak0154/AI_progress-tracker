@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Progress - AI Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>My AI Progress Tracker</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <div id="dashboard-container">
+    <section id="input-section">
+      <h2>Add New Progress</h2>
+      <form id="progress-form">
+        <div class="input-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="input-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="e.g., Python, Math" required>
+        </div>
+        <div class="input-group">
+          <label for="time">Time Spent (minutes)</label>
+          <input type="number" id="time" min="1" required>
+        </div>
+        <div class="input-group">
+          <label for="marks">Marks (Optional)</label>
+          <input type="number" id="marks" step="0.1" placeholder="e.g., 85.5">
+        </div>
+        <div class="input-group">
+          <label for="notes">Notes (Optional)</label>
+          <textarea id="notes" placeholder="e.g., Struggled with loops"></textarea>
+        </div>
+        <button type="submit">Add Entry</button>
+      </form>
+
+      <hr>
+      <h2>AI Summary</h2>
+      <button id="get-summary-btn">Generate My Summary</button>
+      <p class="hint-text">Click to view your complete AI summary and progress insights.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
