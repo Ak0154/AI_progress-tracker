@@ -32,11 +32,11 @@ origins = [
 ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],           # Allow all origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+    allow_methods=["*"],           # Allow all HTTP methods
+    allow_headers=["*"],           # Allow all headers
+))
 
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 app.include_router(progress.router, prefix="/progress")
